@@ -1,0 +1,273 @@
+/* import de fontes */
+/* 
+
+    Utilizar o Dev Tools
+
+    Responsividade
+    Bootstrap
+
+
+*/
+@font-face {
+    font-family: "Roboto-Thin";
+    src: url(../fonts/Roboto/Roboto-Thin.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    src: url(../fonts/Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: "TitilliumWeb-Regular";
+    src: url(../fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto-Light", sans-serif;
+}
+
+/* DESKTOP FIRST ( 992px até o infinito )*/
+.container-gid {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* border: 1px solid salmon; */
+}
+
+
+/* CUSTOMIZAÇÃO DO BOOTSTRAP */
+/* .container, .container-fluid, .container-gid {
+    border: 1px solid red;
+}
+.mostra-coluna {
+    border: 2px solid green;
+} */
+
+.container {
+    max-width: 1200px;
+}
+
+
+
+
+/* ***************** PRODUTOS ***************** */
+header {
+    height: 80px;
+    background-color: black;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+header .logo {
+    width: 280px;
+    /* border: 2px solid white; */
+}
+
+/* navbar */
+header .menu {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    max-width: 680px;
+    /* border: 2px solid red; */
+}
+
+header .menu a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: "Roboto-Light", sans-serif;
+    font-weight: 300;
+}
+
+header .menu-bar {
+    display: none;
+}
+
+
+/* ***************** PRODUTOS/JOGOS ***************** */
+/* section produtos */
+.produtos {
+    width: 100%;
+    height: 600px;
+    background-color: brown;
+
+    background-image: url(../images/banner_pilotos.png);
+    background-repeat: no-repeat;
+    /* background-size: 100%; */
+}
+
+.produtos .banner-flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 600px;
+}
+
+.produtos .banner-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 350px;
+    height: 270px;
+    color: white;
+    /* border: 1px solid white; */
+}
+
+.produtos .banner-info h1 {
+    font-family: "TitilliumWeb-Regular";
+    font-size: 42px;
+    text-align: center;
+
+}
+
+.produtos .banner-info p {
+    font-family: "Roboto-Light";
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.produtos .banner-info a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 50px;
+    font-family: "Roboto-Light";
+    background-color: #C31616;
+
+    border: 1px solid #C31616;
+    border-radius: 10px;
+
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* ESPECIFICIDADE CSS: https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+.mostraMenu {
+    left: 0 !important;
+    opacity: 0.98 !important;
+}
+
+
+
+
+/* ***************JOGOS**************** */
+/* section jogos (produtos) */
+.jogos {
+    background-color: #1E1C21;
+}
+.jogos .ofertas {
+    font-family: "TitilliumWeb-Regular";
+    color: white;
+    padding: 20px 0;
+}
+.jogos .card {
+    max-width: 250px;
+    margin-bottom: 20px;
+    font-family: "Roboto-Thin";
+    color: white;
+    background-image: linear-gradient(to bottom, #1E1C21, #2a2a2c);
+}
+
+.jogos .card .card-title {
+    font-size: 1.5rem;
+    font-family: "Roboto-Light";
+    text-transform: uppercase;
+}
+.jogos .card .btn-buy {
+    width: 100%;
+    font-family: "Roboto-Light";
+    background-color: #C31616;
+    text-transform: uppercase;
+}
+
+
+/* TABLETS < 992px (768px  até 991px)  */
+@media screen and (max-width: 991px) {
+    header {
+        padding: 0 20px;
+    }
+
+    /* navbar container flex*/
+    header .menu {
+        position: fixed;/* fixa o elemento baseado na viewoport */
+        top: 0;
+        left: -80%;/* inicialmente escondido */
+        z-index: 100; /* controla a camada do elemento com position */
+
+
+        opacity: 0;/*inicialmente invisível*/
+        width: 80%;
+        height: 100vh;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #C31616;
+        color: white;
+
+        border-radius: 0 0 0 80px;
+
+        transition: left 0.5s, opacity 0.6s;
+    }
+
+    /* links dos menu itens do flex */
+    header .menu a {
+        border-left: 3px dotted lightgray;
+        width: 80%;
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        padding: 20px;
+        color: lightgrey;
+    }
+
+    /* menu hamburger */
+    header .menu-bar {
+        display: block;
+        width: 45px;
+    }
+}
+
+/* SMARTPHONES  < 768 (0 até 767px)*/
+@media screen and (max-width: 767px) {
+    header .logo {
+        width: 200px;
+    }
+
+    /* navbar */
+    header .menu {
+
+        border-radius: 0 0 0 60px;
+    }
+
+    header .menu a {
+        border-left: 2px dotted lightgray;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    header .menu-bar {
+        width: 30px;
+    }
+}

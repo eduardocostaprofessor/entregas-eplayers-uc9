@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Customização do Bootstrap */
+.btn-primary {
+    background-color: #7e0909;
+    border: 1px solid #7e0909;
+}
+ .btn-primary:hover { /* pseudo-classe */
+    background-color: #9e0c0c;
+    border: 1px solid #9e0c0c;
+}
+.btn-secondary {
+    background-color: #383838;
+    border: 1px solid #383838;
+}

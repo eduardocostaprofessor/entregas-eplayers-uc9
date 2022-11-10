@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Responsivo</title>
+
+    <style>
+        /* 
+            RESPONSIVIDADE
+            tag viewport
+            mobile first ou desktop first
+                mobile first (celular, tablet, desktop)
+                desktop first (desktop, tablet, celular)
+            media queries (breakpoints - quebras de layout)
+        */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-transform: uppercase;
+        }
+
+        /* MOBILE FIRST < 768px (0px até 767px) */
+        /* todo o css feito aqui é para a resolução de celular */
+
+
+
+
+        /* BREAKPOINTS */
+
+        /* 
+            Tablets >= 768px (768px até 991px)
+            h1 tem que centralizar 
+        
+        */
+        @media screen and (min-width: 768px) {
+            h1 {
+                text-align: center;
+            }
+        }
+
+        /* 
+            Desktop >= 992px (992px até 1199px)
+            h1 tem que centralizar, cor de fundo, cor de font 
+        */
+        @media screen and (min-width: 992px) {
+            h1 {
+                background-color: salmon;
+                color: white;
+                text-align: right;
+                padding-right: 10px;
+            }
+
+            .my-title {
+                color: red;
+            }
+        }
+
+        /* Telas Largas (notebooks) >= 1200px  (1200px até 1399px)*/
+        @media screen and (min-width: 1200px) {
+            #container {
+                max-width: 1200px;
+                margin: 0 auto;
+                border: 1px solid green;
+            }
+        }
+
+
+        /* Full HD >= 1440px  (1440px até o infinito!! )*/
+        @media screen and (min-width: 1440px) {}
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+        <h1>Site Responsivo</h1>
+
+        <p class="my-title">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis sed ex numquam natus?
+            Magni modi dolore dignissimos! Doloremque maiores consectetur quia doloribus blanditiis laboriosam fugiat,
+            quis quam illum, fuga delectus!
+        </p>
+
+    </div>
+</body>
+
+</html>
